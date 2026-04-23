@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lumina-bistro
+    ports:
+      - "3007:3007"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
